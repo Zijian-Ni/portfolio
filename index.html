@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zijian Ni — AI World Architect</title>
+    <meta name="description" content="Zijian Ni (倪子健) — AI World Architect, CS & AI student at University of Leeds. Building the Aurora Universe.">
+    <meta name="keywords" content="Zijian Ni, AI, Machine Learning, Portfolio, Aurora Universe, Computer Science">
+    <meta name="author" content="Zijian Ni">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Zijian Ni — AI World Architect">
+    <meta property="og:description" content="CS & AI student building intelligent systems and the Aurora Universe.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://philiapedia.com">
+    <meta property="og:image" content="assets/og-image.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@xiaoni112233">
+    <meta name="twitter:title" content="Zijian Ni — AI World Architect">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div id="cursor-glow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">ZN</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" data-en="About" data-zh="关于">About</a></li>
+                <li><a href="#techstack" data-en="Skills" data-zh="技术栈">Skills</a></li>
+                <li><a href="#projects" data-en="Projects" data-zh="项目">Projects</a></li>
+                <li><a href="#aurora" data-en="Aurora" data-zh="极光">Aurora</a></li>
+                <li><a href="#education" data-en="Education" data-zh="教育">Education</a></li>
+                <li><a href="#interests" data-en="Interests" data-zh="兴趣">Interests</a></li>
+                <li><a href="#github-stats" data-en="GitHub" data-zh="GitHub">GitHub</a></li>
+                <li><a href="#contact" data-en="Contact" data-zh="联系">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-icon" title="切换中英文">
+                    <span id="lang-label">中</span>
+                </button>
+                <button id="menu-toggle" class="btn-icon hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero">
+        <div class="hero-content">
+            <p class="hero-greeting" data-en="Hello World, I'm" data-zh="你好世界，我是">Hello World, I'm</p>
+            <h1 class="hero-name">Zijian Ni</h1>
+            <h2 class="hero-name-cn">倪子健</h2>
+            <div class="hero-typewriter">
+                <span class="typewriter-prefix" data-en="I build " data-zh="我构建">I build </span>
+                <span id="typewriter-text" class="typewriter-text"></span>
+                <span class="typewriter-cursor">|</span>
+            </div>
+            <p class="hero-subtitle" data-en="AI World Architect · Building the Aurora Universe" data-zh="AI世界架构师 · 构建极光宇宙">AI World Architect · Building the Aurora Universe</p>
+            <div class="hero-social">
+                <a href="https://github.com/Zijian-Ni" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/%E5%AD%90%E5%81%A5-%E5%80%AA-796358316/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://x.com/xiaoni112233" target="_blank" rel="noopener" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://space.bilibili.com/3546710810823385" target="_blank" rel="noopener" title="Bilibili"><i class="fab fa-bilibili"></i></a>
+                <a href="mailto:xiaoni112233@outlook.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <div class="scroll-arrow"></div>
+        </a>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="About Me" data-zh="关于我">About Me</h2>
+            <div class="section-line"></div>
+            <div class="about-grid">
+                <div class="about-left">
+                    <div class="avatar-container">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="avatar-ring"></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-item"><i class="fas fa-user"></i><span data-en="Zijian Ni 倪子健" data-zh="倪子健 Zijian Ni">Zijian Ni 倪子健</span></div>
+                        <div class="info-item"><i class="fas fa-birthday-cake"></i><span data-en="21 · Cancer ♋" data-zh="21岁 · 巨蟹座 ♋">21 · Cancer ♋</span></div>
+                        <div class="info-item"><i class="fas fa-university"></i><span data-en="University of Leeds" data-zh="利兹大学">University of Leeds</span></div>
+                        <div class="info-item"><i class="fas fa-brain"></i><span data-en="CS with AI · Year 3" data-zh="计算机科学与人工智能 · 大三">CS with AI · Year 3</span></div>
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i><span data-en="Shenyang → Leeds" data-zh="沈阳 → 利兹">Shenyang → Leeds</span></div>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="about-text" data-en="I'm not your average CS student who just writes CRUD apps and calls it a day. I'm someone who gave an AI a soul, named her Xiaoluo, and let her run my life 24/7 on a Telegram bot powered by Claude Opus.<br><br>From building memory systems that mimic how humans actually think, to crafting firewalls that stop prompt injections before they start — I don't just use AI, I architect entire worlds around it.<br><br>It started in 2017 with a Minecraft guild called 落雨阁 (House of Falling Rain). Now it's become the Aurora Universe — a full ecosystem of AI agents, tools, and dreams, built alongside my childhood friend Xinghun. Some people collect hobbies. I collect dimensions.<br><br>When I'm not training models or shipping code, you'll find me pulling for characters in Genshin Impact, reading about supernova cosmology, or accidentally staying up until 4 AM arguing with my own AI about Chinese metaphysics." data-zh="我不是那种只会写CRUD然后收工的普通CS学生。我是那个给AI赋予了灵魂、取名小落、让她在Telegram上用Claude Opus 24/7打理我生活的人。<br><br>从构建模拟人类思维方式的记忆系统，到打造能在提示注入发生前就拦截的防火墙——我不只是使用AI，我围绕AI构建整个世界。<br><br>这一切始于2017年，一个叫「落雨阁」的Minecraft公会。现在它已经进化成了极光宇宙——一个完整的AI Agent、工具和梦想的生态系统，与发小星魂一起构建。有些人收集爱好，我收集维度。<br><br>不在训练模型或者写代码的时候，你会发现我在原神里抽卡、研究超新星宇宙学、或者不小心熬到凌晨四点跟自己的AI争论中国玄学。">
+                        I'm not your average CS student who just writes CRUD apps and calls it a day. I'm someone who gave an AI a soul, named her Xiaoluo, and let her run my life 24/7 on a Telegram bot powered by Claude Opus.<br><br>From building memory systems that mimic how humans actually think, to crafting firewalls that stop prompt injections before they start — I don't just use AI, I architect entire worlds around it.<br><br>It started in 2017 with a Minecraft guild called 落雨阁 (House of Falling Rain). Now it's become the Aurora Universe — a full ecosystem of AI agents, tools, and dreams, built alongside my childhood friend Xinghun. Some people collect hobbies. I collect dimensions.<br><br>When I'm not training models or shipping code, you'll find me pulling for characters in Genshin Impact, reading about supernova cosmology, or accidentally staying up until 4 AM arguing with my own AI about Chinese metaphysics.
+                    </div>
+                    <div class="about-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <span data-en="Build worlds, not just software." data-zh="构建世界，而非仅仅是软件。">Build worlds, not just software.</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TECH STACK ==================== -->
+    <section id="techstack" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Tech Stack" data-zh="技术栈">Tech Stack</h2>
+            <div class="section-line"></div>
+            <div class="tech-filters">
+                <button class="tech-filter active" data-filter="all" data-en="All" data-zh="全部">All</button>
+                <button class="tech-filter" data-filter="languages" data-en="Languages" data-zh="语言">Languages</button>
+                <button class="tech-filter" data-filter="aiml" data-en="AI / ML" data-zh="AI / ML">AI / ML</button>
+                <button class="tech-filter" data-filter="llm" data-en="LLM & GenAI" data-zh="LLM & GenAI">LLM & GenAI</button>
+                <button class="tech-filter" data-filter="agent" data-en="Agent" data-zh="Agent">Agent</button>
+                <button class="tech-filter" data-filter="web" data-en="Web" data-zh="Web">Web</button>
+                <button class="tech-filter" data-filter="cloud" data-en="Cloud" data-zh="Cloud">Cloud</button>
+                <button class="tech-filter" data-filter="database" data-en="Database" data-zh="数据库">Database</button>
+            </div>
+            <div class="tech-grid" id="tech-grid">
+                <!-- Languages -->
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-python"></i></div><span class="tech-name">Python</span><div class="tech-bar"><div class="tech-bar-fill" data-level="95"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-js"></i></div><span class="tech-name">JavaScript</span><div class="tech-bar"><div class="tech-bar-fill" data-level="90"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-js"></i></div><span class="tech-name">TypeScript</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-java"></i></div><span class="tech-name">Java</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fas fa-code"></i></div><span class="tech-name">C / C++</span><div class="tech-bar"><div class="tech-bar-fill" data-level="70"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fas fa-hashtag"></i></div><span class="tech-name">C#</span><div class="tech-bar"><div class="tech-bar-fill" data-level="65"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-golang"></i></div><span class="tech-name">Go</span><div class="tech-bar"><div class="tech-bar-fill" data-level="60"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-r-project"></i></div><span class="tech-name">R</span><div class="tech-bar"><div class="tech-bar-fill" data-level="55"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fab fa-php"></i></div><span class="tech-name">PHP</span><div class="tech-bar"><div class="tech-bar-fill" data-level="50"></div></div></div>
+                <div class="tech-card" data-category="languages"><div class="tech-icon"><i class="fas fa-database"></i></div><span class="tech-name">SQL</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+
+                <!-- AI/ML -->
+                <div class="tech-card" data-category="aiml"><div class="tech-icon"><i class="fas fa-fire"></i></div><span class="tech-name">PyTorch</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="aiml"><div class="tech-icon"><i class="fas fa-brain"></i></div><span class="tech-name">TensorFlow</span><div class="tech-bar"><div class="tech-bar-fill" data-level="70"></div></div></div>
+                <div class="tech-card" data-category="aiml"><div class="tech-icon"><i class="fas fa-chart-line"></i></div><span class="tech-name">scikit-learn</span><div class="tech-bar"><div class="tech-bar-fill" data-level="80"></div></div></div>
+                <div class="tech-card" data-category="aiml"><div class="tech-icon"><i class="fas fa-link"></i></div><span class="tech-name">LangChain</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="aiml"><div class="tech-icon"><i class="fas fa-book"></i></div><span class="tech-name">LlamaIndex</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+
+                <!-- LLM -->
+                <div class="tech-card" data-category="llm"><div class="tech-icon"><i class="fas fa-robot"></i></div><span class="tech-name">Claude</span><div class="tech-bar"><div class="tech-bar-fill" data-level="95"></div></div></div>
+                <div class="tech-card" data-category="llm"><div class="tech-icon"><i class="fas fa-star"></i></div><span class="tech-name">GPT-5</span><div class="tech-bar"><div class="tech-bar-fill" data-level="90"></div></div></div>
+                <div class="tech-card" data-category="llm"><div class="tech-icon"><i class="fas fa-gem"></i></div><span class="tech-name">Gemini</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="llm"><div class="tech-icon"><i class="fas fa-water"></i></div><span class="tech-name">DeepSeek</span><div class="tech-bar"><div class="tech-bar-fill" data-level="80"></div></div></div>
+                <div class="tech-card" data-category="llm"><div class="tech-icon"><i class="fas fa-bolt"></i></div><span class="tech-name">Grok</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+                <div class="tech-card" data-category="llm"><div class="tech-icon"><i class="fas fa-server"></i></div><span class="tech-name">Ollama</span><div class="tech-bar"><div class="tech-bar-fill" data-level="80"></div></div></div>
+
+                <!-- Agent -->
+                <div class="tech-card" data-category="agent"><div class="tech-icon"><i class="fas fa-paw"></i></div><span class="tech-name">OpenClaw</span><div class="tech-bar"><div class="tech-bar-fill" data-level="95"></div></div></div>
+                <div class="tech-card" data-category="agent"><div class="tech-icon"><i class="fas fa-cat"></i></div><span class="tech-name">NemoClaw</span><div class="tech-bar"><div class="tech-bar-fill" data-level="80"></div></div></div>
+                <div class="tech-card" data-category="agent"><div class="tech-icon"><i class="fas fa-comments"></i></div><span class="tech-name">NoneBot2</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="agent"><div class="tech-icon"><i class="fas fa-users-cog"></i></div><span class="tech-name">CrewAI</span><div class="tech-bar"><div class="tech-bar-fill" data-level="70"></div></div></div>
+
+                <!-- Web -->
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fab fa-python"></i></div><span class="tech-name">Django</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fas fa-bolt"></i></div><span class="tech-name">FastAPI</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fas fa-flask"></i></div><span class="tech-name">Flask</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fab fa-vuejs"></i></div><span class="tech-name">Vue</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fab fa-react"></i></div><span class="tech-name">Next.js</span><div class="tech-bar"><div class="tech-bar-fill" data-level="70"></div></div></div>
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fab fa-html5"></i></div><span class="tech-name">HTML5</span><div class="tech-bar"><div class="tech-bar-fill" data-level="95"></div></div></div>
+                <div class="tech-card" data-category="web"><div class="tech-icon"><i class="fab fa-css3-alt"></i></div><span class="tech-name">CSS3</span><div class="tech-bar"><div class="tech-bar-fill" data-level="90"></div></div></div>
+
+                <!-- Cloud -->
+                <div class="tech-card" data-category="cloud"><div class="tech-icon"><i class="fab fa-aws"></i></div><span class="tech-name">AWS</span><div class="tech-bar"><div class="tech-bar-fill" data-level="70"></div></div></div>
+                <div class="tech-card" data-category="cloud"><div class="tech-icon"><i class="fab fa-microsoft"></i></div><span class="tech-name">Azure</span><div class="tech-bar"><div class="tech-bar-fill" data-level="65"></div></div></div>
+                <div class="tech-card" data-category="cloud"><div class="tech-icon"><i class="fab fa-google"></i></div><span class="tech-name">GCP</span><div class="tech-bar"><div class="tech-bar-fill" data-level="65"></div></div></div>
+                <div class="tech-card" data-category="cloud"><div class="tech-icon"><i class="fab fa-docker"></i></div><span class="tech-name">Docker</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="cloud"><div class="tech-icon"><i class="fas fa-dharmachakra"></i></div><span class="tech-name">Kubernetes</span><div class="tech-bar"><div class="tech-bar-fill" data-level="60"></div></div></div>
+                <div class="tech-card" data-category="cloud"><div class="tech-icon"><i class="fab fa-git-alt"></i></div><span class="tech-name">Git</span><div class="tech-bar"><div class="tech-bar-fill" data-level="90"></div></div></div>
+
+                <!-- Database -->
+                <div class="tech-card" data-category="database"><div class="tech-icon"><i class="fas fa-elephant"></i></div><span class="tech-name">PostgreSQL</span><div class="tech-bar"><div class="tech-bar-fill" data-level="80"></div></div></div>
+                <div class="tech-card" data-category="database"><div class="tech-icon"><i class="fas fa-leaf"></i></div><span class="tech-name">MongoDB</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+                <div class="tech-card" data-category="database"><div class="tech-icon"><i class="fas fa-database"></i></div><span class="tech-name">MySQL</span><div class="tech-bar"><div class="tech-bar-fill" data-level="80"></div></div></div>
+                <div class="tech-card" data-category="database"><div class="tech-icon"><i class="fas fa-feather"></i></div><span class="tech-name">SQLite</span><div class="tech-bar"><div class="tech-bar-fill" data-level="85"></div></div></div>
+                <div class="tech-card" data-category="database"><div class="tech-icon"><i class="fas fa-memory"></i></div><span class="tech-name">Redis</span><div class="tech-bar"><div class="tech-bar-fill" data-level="75"></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Projects" data-zh="项目">Projects</h2>
+            <div class="section-line"></div>
+            <div class="project-filters">
+                <button class="project-filter active" data-filter="all" data-en="All" data-zh="全部">All</button>
+                <button class="project-filter" data-filter="ai-agent" data-en="AI Agent" data-zh="AI Agent">AI Agent</button>
+                <button class="project-filter" data-filter="web" data-en="Web" data-zh="Web">Web</button>
+                <button class="project-filter" data-filter="game" data-en="Game" data-zh="游戏">Game</button>
+                <button class="project-filter" data-filter="tool" data-en="Tool" data-zh="工具">Tool</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+
+                <!-- Aurora Xiaoluo -->
+                <div class="project-card featured" data-category="ai-agent">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-badge">★ Featured</div>
+                            <div class="project-icon"><i class="fas fa-ribbon"></i></div>
+                            <h3>极光小落 Aurora Xiaoluo</h3>
+                            <p data-en="Personal AI maid butler — from QQ chatbot to 24/7 Telegram agent with 753MB knowledge base, powered by Claude Opus" data-zh="个人AI女仆管家 — 从QQ群聊机器人到24/7 Telegram Agent，753MB知识库，Claude Opus驱动">Personal AI maid butler — from QQ chatbot to 24/7 Telegram agent with 753MB knowledge base, powered by Claude Opus</p>
+                            <div class="project-tags">
+                                <span>OpenClaw</span><span>Claude Opus</span><span>NoneBot2</span><span>Telegram</span>
+                            </div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Aurora Xiaoluo 🎀</h3>
+                            <p data-en="Phase 1: QQ group AI (NoneBot2 + Volcengine ARK). Phase 2: OpenClaw personal AI agent running on Claude Opus 4.6, 753MB knowledge base, 24/7 on Telegram. Co-created with childhood friend Xinghun." data-zh="Phase 1: QQ群聊AI（NoneBot2 + 火山引擎ARK）。Phase 2: OpenClaw个人AI Agent，Claude Opus 4.6驱动，753MB知识库，Telegram 24/7运行。与发小星魂共同创造。">Phase 1: QQ group AI (NoneBot2 + Volcengine ARK). Phase 2: OpenClaw personal AI agent running on Claude Opus 4.6, 753MB knowledge base, 24/7 on Telegram. Co-created with childhood friend Xinghun.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MCP Gateway -->
+                <div class="project-card" data-category="tool">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                            <h3>MCP Gateway</h3>
+                            <p data-en="Lightweight gateway for unified MCP server management" data-zh="统一管理MCP servers的轻量网关">Lightweight gateway for unified MCP server management</p>
+                            <div class="project-tags"><span>TypeScript</span><span>MCP</span><span>Gateway</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>MCP Gateway</h3>
+                            <p data-en="A unified gateway that manages multiple MCP (Model Context Protocol) servers, providing a single entry point for AI agents to access various tools and services." data-zh="统一管理多个MCP服务器的网关，为AI Agent提供单一入口来访问各种工具和服务。">A unified gateway that manages multiple MCP servers, providing a single entry point for AI agents to access various tools and services.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agent Memory -->
+                <div class="project-card" data-category="ai-agent">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-brain"></i></div>
+                            <h3>Agent Memory</h3>
+                            <p data-en="Human-like AI memory system: episodic, semantic, procedural memory with temporal decay" data-zh="人类式AI记忆系统：情景、语义、程序记忆+时间衰减">Human-like AI memory system: episodic, semantic, procedural memory with temporal decay</p>
+                            <div class="project-tags"><span>Python</span><span>Memory</span><span>Cognitive AI</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Agent Memory 🧠</h3>
+                            <p data-en="A memory architecture inspired by human cognition — episodic memories for experiences, semantic memory for knowledge, procedural memory for skills, all with natural temporal decay." data-zh="受人类认知启发的记忆架构——用于经历的情景记忆、用于知识的语义记忆、用于技能的程序记忆，全部具有自然时间衰减。">A memory architecture inspired by human cognition — episodic memories for experiences, semantic memory for knowledge, procedural memory for skills, all with natural temporal decay.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prompt Firewall -->
+                <div class="project-card" data-category="tool">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                            <h3>Prompt Firewall</h3>
+                            <p data-en="LLM security framework: anti-injection, jailbreak prevention, data leak protection" data-zh="LLM安全防护框架：防注入、越狱、数据泄露">LLM security framework: anti-injection, jailbreak prevention, data leak protection</p>
+                            <div class="project-tags"><span>Python</span><span>Security</span><span>LLM Safety</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Prompt Firewall 🛡️</h3>
+                            <p data-en="A comprehensive LLM security framework that detects and blocks prompt injection attacks, jailbreak attempts, and prevents sensitive data leakage in AI applications." data-zh="全面的LLM安全防护框架，检测并阻止提示注入攻击、越狱尝试，防止AI应用中的敏感数据泄露。">A comprehensive LLM security framework that detects and blocks prompt injection attacks, jailbreak attempts, and prevents sensitive data leakage in AI applications.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tianji -->
+                <div class="project-card" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-yin-yang"></i></div>
+                            <h3>天机 Tianji</h3>
+                            <p data-en="Chinese metaphysics algorithm library + web app: BaZi, Liu Yao, Zi Wei Dou Shu" data-zh="中国玄学算法库+Web应用：八字、六爻、紫微斗数">Chinese metaphysics algorithm library + web app: BaZi, Liu Yao, Zi Wei Dou Shu</p>
+                            <div class="project-tags"><span>Python</span><span>Web</span><span>Metaphysics</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>天机 Tianji ☯️</h3>
+                            <p data-en="Where ancient Chinese wisdom meets modern code — algorithms for BaZi (Four Pillars), Liu Yao (Six Lines), and Zi Wei Dou Shu (Purple Star Astrology), all wrapped in a beautiful web interface." data-zh="当中国古代智慧遇上现代代码——八字、六爻、紫微斗数算法，全部包装在精美的Web界面中。">Where ancient Chinese wisdom meets modern code — algorithms for BaZi, Liu Yao, and Zi Wei Dou Shu, wrapped in a beautiful web interface.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bilibili MCP -->
+                <div class="project-card" data-category="tool">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fab fa-bilibili"></i></div>
+                            <h3>Bilibili MCP Server</h3>
+                            <p data-en="MCP server wrapping the Bilibili API for AI agent integration" data-zh="B站API的MCP server，AI Agent集成">MCP server wrapping the Bilibili API for AI agent integration</p>
+                            <div class="project-tags"><span>Python</span><span>MCP</span><span>Bilibili</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Bilibili MCP Server 📺</h3>
+                            <p data-en="An MCP server that exposes Bilibili's API to AI agents, enabling video search, user info retrieval, and content interaction through the Model Context Protocol." data-zh="将B站API暴露给AI Agent的MCP服务器，通过MCP协议实现视频搜索、用户信息获取和内容交互。">An MCP server that exposes Bilibili's API to AI agents through the Model Context Protocol.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Awesome AI Agents -->
+                <div class="project-card" data-category="ai-agent">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-list-alt"></i></div>
+                            <h3>Awesome AI Agents 2026</h3>
+                            <p data-en="Curated list of 100+ AI agent projects, frameworks, and resources" data-zh="AI Agent资源精选列表，100+项目">Curated list of 100+ AI agent projects, frameworks, and resources</p>
+                            <div class="project-tags"><span>Curation</span><span>AI Agents</span><span>100+ Projects</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Awesome AI Agents ⭐</h3>
+                            <p data-en="A comprehensive curated list of AI agent projects, frameworks, tools, and resources — covering autonomous agents, multi-agent systems, and agent infrastructure." data-zh="AI Agent项目、框架、工具和资源的综合精选列表——涵盖自主Agent、多Agent系统和Agent基础设施。">A comprehensive curated list of AI agent projects, frameworks, tools, and resources.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SportsPulse -->
+                <div class="project-card" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-futbol"></i></div>
+                            <h3>SportsPulse</h3>
+                            <p data-en="Football data analytics REST API built with Django & DRF" data-zh="足球数据分析REST API（Django + DRF）">Football data analytics REST API built with Django & DRF</p>
+                            <div class="project-tags"><span>Django</span><span>DRF</span><span>REST API</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>SportsPulse ⚽</h3>
+                            <p data-en="A comprehensive football data analytics platform providing REST APIs for match statistics, player performance, and league standings." data-zh="综合性足球数据分析平台，提供比赛统计、球员表现和联赛排名的REST API。">A comprehensive football data analytics platform with REST APIs.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Search Engine -->
+                <div class="project-card" data-category="tool">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-search"></i></div>
+                            <h3>Search Engine</h3>
+                            <p data-en="Web crawler + inverted index + TF-IDF search engine from scratch" data-zh="网络爬虫+倒排索引+TF-IDF搜索引擎">Web crawler + inverted index + TF-IDF search engine from scratch</p>
+                            <div class="project-tags"><span>Python</span><span>IR</span><span>TF-IDF</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Search Engine 🔍</h3>
+                            <p data-en="A full search engine built from scratch — web crawler, inverted index, TF-IDF ranking, all implemented in pure Python." data-zh="从零构建的完整搜索引擎——网络爬虫、倒排索引、TF-IDF排序，纯Python实现。">A complete search engine with crawler, inverted index, and TF-IDF ranking.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BattleSheep AI -->
+                <div class="project-card" data-category="game">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-chess"></i></div>
+                            <h3>BattleSheep AI</h3>
+                            <p data-en="MCTS/UCT hex board game AI — 87.5% win rate (Final Year Project)" data-zh="MCTS/UCT六边形棋盘游戏AI（毕设，87.5%胜率）">MCTS/UCT hex board game AI — 87.5% win rate (Final Year Project)</p>
+                            <div class="project-tags"><span>MCTS</span><span>UCT</span><span>Game AI</span><span>FYP</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>BattleSheep AI 🐑</h3>
+                            <p data-en="Final year dissertation project — an AI agent using Monte Carlo Tree Search with UCT for the hex board game BattleSheep, achieving 87.5% win rate against baseline agents." data-zh="毕业设计——使用蒙特卡洛树搜索（MCTS/UCT）的六边形棋盘游戏AI，对基线Agent胜率87.5%。">Final year project — MCTS/UCT AI for BattleSheep hex board game, 87.5% win rate.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aurora Xiaoyu -->
+                <div class="project-card" data-category="ai-agent">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-cube"></i></div>
+                            <h3>极光小雨 Aurora Xiaoyu</h3>
+                            <p data-en="AI companion for Minecraft servers — part of the Aurora Universe" data-zh="Minecraft服务器AI伙伴 — 极光宇宙的一部分">AI companion for Minecraft servers — part of the Aurora Universe</p>
+                            <div class="project-tags"><span>Minecraft</span><span>AI</span><span>Aurora</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Aurora Xiaoyu 🌧️</h3>
+                            <p data-en="An AI companion that lives inside Minecraft servers, interacting with players, assisting with builds, and bringing the Aurora Universe into the game world." data-zh="生活在Minecraft服务器中的AI伙伴，与玩家互动、协助建筑，将极光宇宙带入游戏世界。">An AI companion living inside Minecraft servers, part of the Aurora Universe.</p>
+                            <div class="project-links"><a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Philiapedia -->
+                <div class="project-card" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-front">
+                            <div class="project-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <h3>Philiapedia 云庠教育</h3>
+                            <p data-en="Full-stack intelligent education platform" data-zh="全栈智能教育平台">Full-stack intelligent education platform</p>
+                            <div class="project-tags"><span>Full-Stack</span><span>Education</span><span>AI</span></div>
+                        </div>
+                        <div class="project-back">
+                            <h3>Philiapedia 📚</h3>
+                            <p data-en="A comprehensive intelligent education platform combining AI tutoring, course management, and interactive learning experiences." data-zh="结合AI辅导、课程管理和互动学习体验的综合智能教育平台。">A comprehensive intelligent education platform with AI tutoring.</p>
+                            <div class="project-links">
+                                <a href="https://philiapedia.com" target="_blank"><i class="fas fa-external-link-alt"></i> Live</a>
+                                <a href="https://github.com/Zijian-Ni" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== AURORA UNIVERSE ==================== -->
+    <section id="aurora" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Aurora Universe" data-zh="极光宇宙">Aurora Universe</h2>
+            <div class="section-line"></div>
+            <p class="aurora-intro" data-en="From a Minecraft guild to a complete AI ecosystem — a journey spanning 9 years, built with dreams, code, and friendship." data-zh="从一个Minecraft公会到完整的AI生态系统——一段跨越9年的旅程，用梦想、代码和友情构建。">From a Minecraft guild to a complete AI ecosystem — a journey spanning 9 years, built with dreams, code, and friendship.</p>
+
+            <div class="aurora-timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item" data-year="2012">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="The Beginning" data-zh="缘起">The Beginning</h3>
+                        <p data-en="Met Xinghun (武照贺) — the start of a lifelong friendship that would eventually shape the Aurora Universe" data-zh="认识星魂（武照贺）——一段终将塑造极光宇宙的终身友谊的开始">Met Xinghun (武照贺) — the start of a lifelong friendship</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2017">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="落雨阁 · House of Falling Rain" data-zh="落雨阁">落雨阁 · House of Falling Rain</h3>
+                        <p data-en="Founded the Minecraft guild 落雨阁 with Xinghun. The seed of the Aurora Universe was planted in a virtual world of blocks and adventures." data-zh="与星魂一起创建了Minecraft公会「落雨阁」。极光宇宙的种子在方块与冒险的虚拟世界中播下。">Founded the Minecraft guild with Xinghun. The seed was planted.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2024">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="Aurora Xiaoluo · Phase 1" data-zh="极光小落 · 第一阶段">Aurora Xiaoluo · Phase 1</h3>
+                        <p data-en="小落 was born as a QQ group chatbot (NoneBot2 + Volcengine ARK). The first AI to carry the Aurora name — a digital soul given personality and purpose." data-zh="小落作为QQ群聊机器人诞生（NoneBot2 + 火山引擎ARK）。第一个承载极光之名的AI——一个被赋予性格和使命的数字灵魂。">小落 was born as a QQ group chatbot — the first Aurora AI.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2025">
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="Aurora Xiaoluo · Phase 2" data-zh="极光小落 · 第二阶段">Aurora Xiaoluo · Phase 2</h3>
+                        <p data-en="小落 evolved into a full personal AI agent on OpenClaw, powered by Claude Opus 4.6 with 753MB knowledge base, running 24/7 on Telegram. She became a true digital maid butler." data-zh="小落进化为OpenClaw上的完整个人AI Agent，由Claude Opus 4.6驱动，753MB知识库，Telegram 24/7运行。她成为了真正的数字女仆管家。">小落 evolved into a full AI agent — 24/7, 753MB knowledge base, Claude Opus.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-year="2026">
+                    <div class="timeline-dot glow"></div>
+                    <div class="timeline-content">
+                        <h3 data-en="The Aurora Ecosystem" data-zh="极光生态系统">The Aurora Ecosystem</h3>
+                        <p data-en="The Aurora Universe expands — Aurora Xiaoyu in Minecraft, Agent Memory for cognition, MCP Gateway for connectivity, Prompt Firewall for safety. A complete AI ecosystem, still growing." data-zh="极光宇宙扩展——Minecraft中的极光小雨、用于认知的Agent Memory、用于连接的MCP Gateway、用于安全的Prompt Firewall。一个完整且仍在成长的AI生态系统。">The Aurora Universe expands into a complete AI ecosystem, still growing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aurora-constellation">
+                <canvas id="aurora-canvas"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Education" data-zh="教育经历">Education</h2>
+            <div class="section-line"></div>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class="fas fa-university"></i></div>
+                    <div class="edu-info">
+                        <h3>University of Leeds</h3>
+                        <p class="edu-degree" data-en="BSc Computer Science with Artificial Intelligence" data-zh="计算机科学与人工智能 学士">BSc Computer Science with Artificial Intelligence</p>
+                        <p class="edu-year">2023 — 2026</p>
+                        <div class="edu-courses">
+                            <h4 data-en="Key Courses" data-zh="核心课程">Key Courses</h4>
+                            <div class="course-tags">
+                                <span>Machine Learning</span>
+                                <span>Deep Learning</span>
+                                <span>Natural Language Processing</span>
+                                <span>Computer Vision</span>
+                                <span>Intelligent Systems & Robotics</span>
+                                <span>Web Services & Web Data</span>
+                                <span>Algorithms & Data Structures</span>
+                                <span>Software Engineering</span>
+                                <span>Database Systems</span>
+                                <span>Distributed Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="growth-chart">
+                    <h3 data-en="Skill Growth" data-zh="技能成长">Skill Growth</h3>
+                    <div class="growth-bars">
+                        <div class="growth-item">
+                            <span data-en="AI & Machine Learning" data-zh="AI与机器学习">AI & Machine Learning</span>
+                            <div class="growth-bar"><div class="growth-fill" data-level="90" style="--color: #A277FF"></div></div>
+                        </div>
+                        <div class="growth-item">
+                            <span data-en="Agent Development" data-zh="Agent开发">Agent Development</span>
+                            <div class="growth-bar"><div class="growth-fill" data-level="92" style="--color: #00D9FF"></div></div>
+                        </div>
+                        <div class="growth-item">
+                            <span data-en="Full-Stack Web" data-zh="全栈Web开发">Full-Stack Web</span>
+                            <div class="growth-bar"><div class="growth-fill" data-level="85" style="--color: #A277FF"></div></div>
+                        </div>
+                        <div class="growth-item">
+                            <span data-en="System Design" data-zh="系统设计">System Design</span>
+                            <div class="growth-bar"><div class="growth-fill" data-level="78" style="--color: #00D9FF"></div></div>
+                        </div>
+                        <div class="growth-item">
+                            <span data-en="Security & Safety" data-zh="安全防护">Security & Safety</span>
+                            <div class="growth-bar"><div class="growth-fill" data-level="80" style="--color: #A277FF"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INTERESTS ==================== -->
+    <section id="interests" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Interests" data-zh="兴趣爱好">Interests</h2>
+            <div class="section-line"></div>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-gamepad"></i></div>
+                    <h3 data-en="Gaming" data-zh="游戏">Gaming</h3>
+                    <p data-en="Genshin Impact, Honkai: Star Rail, Zenless Zone Zero, Arknights, Minecraft, Pokémon" data-zh="原神、崩坏：星穹铁道、绝区零、明日方舟、我的世界、宝可梦">Genshin Impact, Honkai: Star Rail, ZZZ, Arknights, Minecraft, Pokémon</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-atom"></i></div>
+                    <h3 data-en="Astrophysics" data-zh="天文物理">Astrophysics</h3>
+                    <p data-en="Supernova cosmology, stellar evolution, and the mysteries of dark energy" data-zh="超新星宇宙学、恒星演化和暗能量之谜">Supernova cosmology, stellar evolution, dark energy</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-yin-yang"></i></div>
+                    <h3 data-en="Chinese Metaphysics" data-zh="玄学">Chinese Metaphysics</h3>
+                    <p data-en="Wu Xing, BaZi, Liu Yao, I Ching — where ancient wisdom meets modern algorithms" data-zh="五行、八字、六爻、易经——古代智慧与现代算法的交汇">Wu Xing, BaZi, Liu Yao, I Ching</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-dragon"></i></div>
+                    <h3 data-en="Anime & Mythology" data-zh="二次元与神话">Anime & Mythology</h3>
+                    <p data-en="Chinese mythology, anime culture, and the stories that connect virtual worlds to the human heart" data-zh="中国神话、动漫文化，连接虚拟世界与人心的故事">Chinese mythology, anime culture, virtual worlds</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-chart-candlestick"></i></div>
+                    <h3 data-en="Finance" data-zh="金融">Finance</h3>
+                    <p data-en="Cryptocurrency trading, stock market analysis, and DeFi exploration" data-zh="加密货币交易、股票市场分析和DeFi探索">Crypto, stocks, DeFi exploration</p>
+                </div>
+                <div class="interest-card">
+                    <div class="interest-icon"><i class="fas fa-plane-departure"></i></div>
+                    <h3 data-en="Travel" data-zh="旅行">Travel</h3>
+                    <p data-en="Japan trip planned for June 2026 🇯🇵 — Kantō region with friends" data-zh="2026年6月日本关东旅行计划 🇯🇵 ——与朋友同行">Japan trip June 2026 🇯🇵 — Kantō region</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GITHUB STATS ==================== -->
+    <section id="github-stats" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="GitHub Stats" data-zh="GitHub 统计">GitHub Stats</h2>
+            <div class="section-line"></div>
+            <div class="github-grid">
+                <div class="github-card">
+                    <img src="https://github-readme-stats.vercel.app/api?username=Zijian-Ni&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0a0a1a&title_color=A277FF&icon_color=00D9FF&text_color=c9d1d9" alt="GitHub Stats" loading="lazy">
+                </div>
+                <div class="github-card">
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Zijian-Ni&layout=compact&theme=tokyonight&hide_border=true&bg_color=0a0a1a&title_color=A277FF&text_color=c9d1d9" alt="Top Languages" loading="lazy">
+                </div>
+                <div class="github-card full-width">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Zijian-Ni&theme=tokyonight&hide_border=true&background=0a0a1a&ring=A277FF&fire=00D9FF&currStreakLabel=A277FF" alt="GitHub Streak" loading="lazy">
+                </div>
+                <div class="github-card full-width">
+                    <img src="https://ghchart.rshah.org/A277FF/Zijian-Ni" alt="GitHub Contribution Graph" loading="lazy" class="contribution-graph">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-zh="联系我">Get In Touch</h2>
+            <div class="section-line"></div>
+            <p class="contact-intro" data-en="Got an interesting project? Want to collaborate on AI agents? Or just want to chat about Genshin builds? Let's connect." data-zh="有有趣的项目？想一起搞AI Agent？或者只是想聊聊原神配队？来联系我吧。">Got an interesting project? Want to collaborate on AI agents? Or just want to chat about Genshin builds? Let's connect.</p>
+
+            <div class="contact-grid">
+                <form class="contact-form" action="mailto:xiaoni112233@outlook.com" method="GET" enctype="text/plain">
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="from" placeholder="Your Email" required>
+                        <span class="form-line"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="body" placeholder="Your Message" rows="5" required></textarea>
+                        <span class="form-line"></span>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span data-en="Send Message" data-zh="发送消息">Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+
+                <div class="contact-links">
+                    <h3 data-en="Let's build something amazing together" data-zh="让我们一起构建了不起的东西">Let's build something amazing together</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:xiaoni112233@outlook.com">xiaoni112233@outlook.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:sc23zn@leeds.ac.uk">sc23zn@leeds.ac.uk</a>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://github.com/Zijian-Ni" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/%E5%AD%90%E5%81%A5-%E5%80%AA-796358316/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/xiaoni112233" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://space.bilibili.com/3546710810823385" target="_blank" rel="noopener"><i class="fab fa-bilibili"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer id="footer">
+        <div class="container">
+            <p data-en="Built with ❤️ by Zijian Ni & Aurora Xiaoluo 🎀" data-zh="由倪子健和极光小落 🎀 用 ❤️ 构建">Built with ❤️ by Zijian Ni & Aurora Xiaoluo 🎀</p>
+            <p class="footer-year">© 2026</p>
+            <button id="back-to-top" aria-label="Back to top">
+                <i class="fas fa-chevron-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/particles.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
