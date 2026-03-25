@@ -1130,3 +1130,166 @@ img { max-width: 100%; height: auto; }
     .tech-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
     .project-card { height: 280px; }
 }
+
+/* ============================================================
+   BLOG SECTION
+   ============================================================ */
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: all var(--transition);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    border-color: var(--purple);
+    box-shadow: 0 8px 32px var(--purple-glow);
+    transform: translateY(-4px);
+}
+
+.blog-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(162, 119, 255, 0.12);
+    color: var(--tag-color, var(--purple));
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    width: fit-content;
+    margin-bottom: 14px;
+}
+
+.blog-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.blog-title a {
+    color: var(--text-primary);
+    transition: color var(--transition);
+}
+
+.blog-title a:hover {
+    color: var(--cyan);
+}
+
+.blog-excerpt {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.blog-date {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.blog-read-more {
+    color: var(--cyan);
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all var(--transition);
+}
+
+.blog-read-more:hover {
+    color: var(--purple);
+    transform: translateX(4px);
+}
+
+/* ============================================================
+   PROJECT CARD GLOW ON HOVER
+   ============================================================ */
+
+.project-front {
+    transition: all var(--transition);
+}
+
+.project-card:hover .project-front {
+    border-color: var(--purple);
+    box-shadow: 0 0 20px var(--purple-glow), 0 0 40px rgba(0, 217, 255, 0.1);
+}
+
+.project-card.featured:hover .project-front {
+    box-shadow: 0 0 30px var(--purple-glow), 0 0 60px rgba(0, 217, 255, 0.15);
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--purple-dim), var(--cyan-dim));
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--purple), var(--cyan));
+}
+
+/* Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--purple-dim) var(--bg-primary);
+}
+
+/* ============================================================
+   NAV ACTIVE UNDERLINE ANIMATION
+   ============================================================ */
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--purple), var(--cyan));
+    border-radius: 1px;
+    transition: all var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 60%;
+}
+
+/* ============================================================
+   BLOG RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    .blog-grid { grid-template-columns: 1fr; }
+}

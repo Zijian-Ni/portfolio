@@ -13,13 +13,14 @@
     let width, height, particles, mouse, animId;
 
     const CONFIG = {
-        count: 120,          // number of particles (scaled down on mobile)
+        count: 200,          // number of particles (scaled down on mobile)
         maxSpeed: 0.4,
         minRadius: 1,
-        maxRadius: 2.5,
-        linkDistance: 150,
-        linkOpacity: 0.12,
+        maxRadius: 3,
+        linkDistance: 120,
+        linkOpacity: 0.15,
         mouseRadius: 200,
+        mouseAttraction: 0.015,  // gentle attraction toward cursor
         colors: ['#A277FF', '#00D9FF', '#c4b5fd', '#67e8f9', '#ffffff'],
     };
 
@@ -75,12 +76,12 @@
             const twinkle = 0.5 + 0.5 * Math.sin(time * p.twinkleSpeed + p.twinkleOffset);
             const alpha = p.alpha * twinkle;
 
-            // Mouse repulsion
-            const mdx = p.x - mouse.x;
-            const mdy = p.y - mouse.y;
+            // Mouse attraction (gentle pull toward cursor)
+            const mdx = mouse.x - p.x;
+            const mdy = mouse.y - p.y;
             const mDist = Math.sqrt(mdx * mdx + mdy * mdy);
             if (mDist < CONFIG.mouseRadius && mDist > 0) {
-                const force = (1 - mDist / CONFIG.mouseRadius) * 0.02;
+                const force = (1 - mDist / CONFIG.mouseRadius) * CONFIG.mouseAttraction;
                 p.vx += (mdx / mDist) * force;
                 p.vy += (mdy / mDist) * force;
             }
