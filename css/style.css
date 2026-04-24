@@ -221,6 +221,11 @@ img { max-width: 100%; height: auto; }
     animation: fadeInUp 0.8s 0.4s forwards;
 }
 
+/* A11y: 关闭动画的用户 / 辅助工具 / headless 渲染器直接显示 */
+@media (prefers-reduced-motion: reduce) {
+    .hero-name { opacity: 1; animation: none; }
+}
+
 .hero-name-cn {
     font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 300;
@@ -1218,6 +1223,45 @@ img { max-width: 100%; height: auto; }
 .blog-read-more:hover {
     color: var(--purple);
     transform: translateX(4px);
+}
+
+.blog-read-more.disabled {
+    color: var(--text-muted);
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+    font-style: italic;
+    letter-spacing: 0.02em;
+}
+
+.blog-read-more.disabled:hover {
+    transform: none;
+    color: var(--text-muted);
+}
+
+/* ============================================================
+   INLINE SVG ICONS (Simple Icons fallback for FA Free gaps)
+   ============================================================ */
+
+.icon-svg {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.125em;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* Match sizing when used inside project-icon / social circles */
+.project-icon .icon-svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.hero-social .icon-svg,
+.contact-social .icon-svg {
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 /* ============================================================
